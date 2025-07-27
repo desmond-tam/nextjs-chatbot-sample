@@ -4,7 +4,7 @@ The next js application using tailwind
 
 Deployment
 
-1. The deployment depends SSR or purely front end that can be deployed to static app service
+1. **Deployment:** Depends on whether the app uses server-side rendering (SSR) or is a purely client-side application. Client-only builds can be deployed to a static app service, while SSR features require a server-capable host.The deployment depends SSR or purely front end that can be deployed to static app service.
 
 Demonstration
 
