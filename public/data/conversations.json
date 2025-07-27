@@ -1,0 +1,32 @@
+[
+    {
+        "id":1,
+        "type":"incoming",
+        "contents":"Hey Bob, how's it going?"
+    },
+    {
+        "id":2,
+        "type":"outgoing",
+        "contents":"Hi Alice! I'm good, just finished a great book. How about you?"
+    },
+        {
+        "id":3,
+        "type":"incoming",
+        "contents":"That book sounds interesting! What's it about?"
+    },
+        {
+        "id":4,
+        "type":"outgoing",
+        "contents":"It's about an astronaut stranded on Mars, trying to survive. Gripping stuff!"
+    },
+            {
+        "id":5,
+        "type":"incoming",
+        "contents":"I'm intrigued! Maybe I'll borrow it from you when you're done?"
+    },
+            {
+        "id":6,
+        "type":"outgoing",
+        "contents":"Of course! I'll drop it off at your place tomorrow."
+    }
+]

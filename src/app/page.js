@@ -1,4 +1,8 @@
 import Image from "next/image";
+import { Suspense } from 'react'
+import AdminMessages from './messages/components/AdminMessages';
+import Conversations from './messages/components/Conversations';
+import Spinner from './share/Spinner';
 
 export default function Home() {
   return (
@@ -27,23 +31,10 @@ export default function Home() {
         
           {/* <!-- Contact List --> */}
           <div className="overflow-y-auto h-screen p-3 mb-9 pb-20">
-            <div className="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
-              <div className="w-10 h-10 bg-gray-300 rounded-full mr-3">
-                <Image src="/images/profile3.png" width={40} height={40} alt="User Avatar" className="w-10 h-10 rounded-full" />
-              </div>
-              <div className="flex-1">
-                <p className="text-gray-600 text-sm">My name is Alice, the administrator, I will look after your conversation.</p>
-              </div>
-            </div>
-            
-            <div className="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
-              <div className="w-10 h-10 bg-gray-300 rounded-full mr-3">
-                <Image src="/images/profile3.png" width={40} height={40} alt="User Avatar" className="w-10 h-10 rounded-full" />
-              </div>
-              <div className="flex-1">
-                <p className="text-gray-600  text-sm">I have chosen this paragraph for you and you can only send maximum 3 queries.</p>
-              </div>
-            </div>
+            <Suspense fallback={<Spinner />}>
+              <AdminMessages />
+            </Suspense>
+
           </div>
         </div>
         
@@ -56,26 +47,7 @@ export default function Home() {
             
             {/* <!-- Chat Messages --> */}
             <div className="h-screen overflow-y-auto p-4 pb-36">
-               {/* <!-- Incoming Message --> */}
-               <div className="flex mb-4 cursor-pointer">
-                 <div className="w-9 h-9 rounded-full flex items-center justify-center mr-2">
-                   <Image src="/images/sarah.png" alt="User Avatar" width={40} height={40} className="w-8 h-8 rounded-full"/>
-                 </div>
-                 <div className="flex max-w-96 bg-white rounded-lg p-3 gap-3">
-                   <p className="text-gray-700">My name is Sarah, I am here to help. May I start with your name please?</p>
-                 </div>
-               </div>
-               
-               {/* <!-- Outgoing Message --> */}
-               <div className="flex justify-end mb-4 cursor-pointer">
-                 <div className="flex max-w-96 bg-indigo-500 text-white rounded-lg p-3 gap-3">
-                   <p>Hi Alice! I good, just finished a great book. How about you?</p>
-                 </div>
-                 <div className="w-9 h-9 rounded-full flex items-center justify-center ml-2">
-                   <Image src="/images/guest-male.jpg" alt="My Avatar" width={40} height={40} className="w-8 h-8 rounded-full"/>
-                 </div>
-               </div>
-               
+                <Conversations />
                {/* <!-- Incoming Message --> */}
                <div className="flex mb-4 cursor-pointer">
                  <div className="w-9 h-9 rounded-full flex items-center justify-center mr-2">

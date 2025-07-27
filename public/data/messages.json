@@ -1,0 +1,22 @@
+[
+    { 
+        "id":1,
+        "contents":"Hello World! This a sample chat bot, you will receive a paragraph that the answer of the queries will be based on the paragraph.",
+        "fromNow":"12 mins ago"
+    },
+    { 
+        "id":2,
+        "contents":"Here is the sample contents kept in our system at the moment and will be used for the queries answer.",
+        "fromNow":"12 mins ago"
+    },
+    { 
+        "id":3,
+        "contents":"You can ask maximum three questions. your queries should not contain any bad language, sensitive words. There is no connection to any emergency department.",
+        "fromNow":"12 mins ago"
+    },
+    { 
+        "id":4,
+        "contents":"Have Fun!",
+        "fromNow":"12 mins ago"
+    }
+]
