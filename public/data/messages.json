@@ -1,17 +1,17 @@
 [
     { 
         "id":1,
-        "contents":"Hello World! This a sample chat bot, you will receive a paragraph that the answer of the queries will be based on the paragraph.",
+        "contents":"Hello, World! This is a sample chatbot. You’ll receive a paragraph, and the bot will answer your queries based on its content.",
         "fromNow":"12 mins ago"
     },
     { 
         "id":2,
-        "contents":"Here is the sample contents kept in our system at the moment and will be used for the queries answer.",
+        "contents":"The following sample content is currently stored in our system and will be used to generate responses to your queries.",
         "fromNow":"12 mins ago"
     },
     { 
         "id":3,
-        "contents":"You can ask maximum three questions. your queries should not contain any bad language, sensitive words. There is no connection to any emergency department.",
+        "contents":"You may ask up to three questions. Please ensure your queries do not include inappropriate language or sensitive content. This system is not connected to any emergency services.",
         "fromNow":"12 mins ago"
     },
     { 
