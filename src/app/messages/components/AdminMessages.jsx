@@ -1,5 +1,6 @@
 import { headers } from 'next/headers';
 import Error from '../../share/Error';
+import axios from 'axios';
 const AdminMessage = ({item}) => {
     return (
         <div className="flex items-center mb-4 cursor-pointer hover:bg-gray-100 p-2 rounded-md">
@@ -32,9 +33,9 @@ export default async function AdminMessages() {
         data = await fetch(`${baseUrl}/data/messages.json`)
             .then(res => res.json())
             .catch(err => {
-                throw new Error(`Fetch failed: ${err.status}`);
-            });
-
+                throw new Error(`Fetch failed with status ${err.status}`); 
+            })
+       
         return (
             <>
                 {data.map(x => (
@@ -43,7 +44,7 @@ export default async function AdminMessages() {
             </>
         )
     } catch (err) {
-        return Error;
+        return <Error />;
     }
     
 }

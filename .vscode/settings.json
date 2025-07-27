@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/f233ebc5-c366-44d7-942b-dc82aebe5b34/resourceGroups/rg-sample/providers/Microsoft.Web/sites/nextjs-chatbot",
+    "appService.deploySubpath": "."
+}

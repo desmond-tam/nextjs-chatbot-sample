@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import "./globals.css";
 
 const geistSans = Geist({
@@ -27,9 +29,11 @@ export default async function RootLayout({ children }) {
   return (
   <html lang="en">
     <body style={{'background':'#edf2f7'}}
-      className={`h-screen overflow-hidden flex items-center`}
+      className="min-h-screen bg-gray-50 flex flex-col"
     >
+      <Header />
       {children}
+      <Footer />
     </body>
   </html>
   );

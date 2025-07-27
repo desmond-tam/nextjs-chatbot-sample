@@ -2,6 +2,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Error from '../../share/Error';
+import Spinner from '../../share/Spinner';
 
 const IncomingMessage = ({item}) => {
     return (
@@ -43,19 +44,31 @@ export default function Conversations() {
     // this is a client side fetch
     const [messages,setMessages] = useState([]);
     const [showError,setShowError] = useState(false);
+    const [isLoading,setIsLoading] = useState(false);
     useEffect(() => {
-        fetch('/data/conversations.json')
-            .then(res => res.json())
-            .then(data => {
-                setMessages(data);
-            })
-            .catch(err => {
-                setShowError(true);
-            });
+        setIsLoading(true);
+        // set the delay to show the spinner
+        setTimeout(() => {
+            fetch('/data/conversations.json')
+                .then(res => res.json())
+                .then(data => {
+                    setMessages(data);
+                })
+                .catch(err => {
+                    setShowError(true);
+                })
+                .finally(() => {
+                    setIsLoading(false);
+                });
+        }, 3000);
+        
     },[]);
 
     return (
         <>
+            {
+                (isLoading) && <Spinner />
+            }
             {
                 (showError) && <Error />
             }
