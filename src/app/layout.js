@@ -19,11 +19,11 @@ export const metadata = {
 };
 
 export default async function RootLayout({ children }) {
-  const cookieStore = await cookies();
-  const token = cookieStore.get('guestToken');
-    if (!token) {
-    redirect('/api/set-token?returnTo=/');
-  }
+  // const cookieStore = await cookies();
+  // const token = cookieStore.get('guestToken');
+  //   if (!token) {
+  //   redirect('/api/set-token?returnTo=/');
+  // }
   return (
   <html lang="en">
     <body style={{'background':'#edf2f7'}}
